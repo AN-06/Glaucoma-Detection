@@ -62,12 +62,12 @@ Glaucoma-Detection/
 
 1. **Clone the Repository:**  
    ```bash
-   !git clone https://github.com/CODEBRAKERBOYY/GlaucomaDetection.git
+   !git clone https://github.com/AN-06/Glaucoma-Detection.git
    ```
 
 2. **Navigate to the Project Directory:**  
    ```bash
-   %cd GlaucomaDetection
+   %cd Glaucoma-Detection
    ```
 
 3. **Install Required Libraries:**  
