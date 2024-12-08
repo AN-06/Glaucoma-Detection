@@ -123,11 +123,11 @@ DATASET
 
   ### Accuracy plot
 
-![Accuracy Plot](https://github.com/CODEBRAKERBOYY/Glaucoma-Detection/blob/main/assets/Unknown-13.png)
+![Accuracy Plot](https://github.com/AN-06/Glaucoma-Detection/blob/main/assets/Unknown-13.png)
 
   ### Image Processing
 
-  ![Image Processing](https://github.com/CODEBRAKERBOYY/Glaucoma-Detection/blob/main/assets/IMAGE%20PROCESSING.png)
+  ![Image Processing](https://github.com/AN-06/Glaucoma-Detection/blob/main/assets/IMAGE%20PROCESSING.png)
 
   
 
