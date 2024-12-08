@@ -1,16 +1,24 @@
-# Glaucoma Detection Using Deep Learning
+# **Glaucoma Detection Using Deep Learning**  
 
-## Problem Statement
-Glaucoma is a chronic eye disease that damages the optic nerve, potentially leading to vision loss or blindness if not detected early. Traditional diagnostic methods require skilled professionals and can be costly and time-consuming, making it difficult to implement at a large scale. Given the global prevalence of glaucoma, there is an urgent need for accessible and accurate automated diagnostic tools.
+---
 
-This project aims to develop a deep learning-based solution for glaucoma detection using fundus images of the eye. By training a neural network on labeled images, the model can classify images as either **Glaucoma Positive** or **Glaucoma Negative**, helping in early detection and diagnosis. The goal is to create a model that performs well across various datasets and minimizes false positives and false negatives, thereby assisting healthcare providers in screening and decision-making.
+## **📌 Problem Statement**  
 
-The project leverages ResNet18, a convolutional neural network architecture, for binary classification of glaucoma, with the following objectives:
-- **High Accuracy**: Maximize overall classification accuracy.
-- **Low False Positives**: Reduce misclassification of healthy eyes as glaucoma-positive.
-- **Low False Negatives**: Avoid missing cases where glaucoma is present.
+Glaucoma is a chronic, irreversible eye disease that damages the optic nerve, potentially causing blindness if left untreated. Early detection is crucial, but traditional diagnostic methods require expert evaluation, which is expensive and time-consuming. Given its global impact, an automated deep learning-based diagnostic system can provide scalable, cost-effective solutions.  
 
-This solution, once optimized, could assist in developing automated systems for early glaucoma screening, benefiting both clinicians and patients by enabling prompt and affordable diagnostics.
+This project leverages deep learning for glaucoma detection using retinal fundus images. The objective is to build a model that accurately classifies images as **Glaucoma Positive** or **Glaucoma Negative**, supporting healthcare professionals in early diagnosis and treatment.  
+
+---
+
+### **🎯 Key Objectives:**  
+
+- **High Accuracy:** Maximize overall prediction accuracy.  
+- **Low False Positives:** Avoid misclassifying healthy eyes.  
+- **Low False Negatives:** Minimize undetected glaucoma cases.  
+
+The deep learning model is based on a Vision Transformer (ViT), a state-of-the-art neural network architecture. This solution can assist in developing automated glaucoma screening systems for hospitals, clinics, and research institutions.  
+
+---
 
 <br>
 <div align="center">
@@ -33,22 +41,130 @@ This solution, once optimized, could assist in developing automated systems for 
 <br>
 
 
-## Required Modules
+---
 
-- **numpy**: Array manipulation and numerical operations
-- **pandas**: Data manipulation and analysis
-- **scikit-learn**: Machine learning utilities like metrics and preprocessing
+## **📁 Project Structure**  
 
-### Deep Learning and Image Processing
-- **tensorflow**: Deep learning framework; includes Keras for model building
-- **keras**: Interface for the TensorFlow deep learning framework (optional if using TensorFlow 2.x)
-- **opencv-python**: Image processing library (optional, for image transformations)
-- **Pillow**: Image processing library, used with Keras for loading images
+```
+Glaucoma-Detection/  
+├── dataset_preparation.py     # Preprocess dataset and organize images  
+├── train_model.py              # Train ViT model on the dataset  
+├── train_plot.py               # Plot training results  
+├── test.py                     # Evaluate model performance  
+├── assets/                     # Contains plots and result images  
+├── requirements.txt            # Required libraries  
+└── README.md                   # Project overview (this file)  
+```
 
-### Visualization
-- **matplotlib**: Plotting and visualization of data and model metrics
-- **seaborn**: Statistical data visualization (optional, enhances matplotlib)
+---
 
+## **🔧 Installation and Setup**  
+
+1. **Clone the Repository:**  
+   ```bash
+   !git clone https://github.com/CODEBRAKERBOYY/GlaucomaDetection.git
+   ```
+
+2. **Navigate to the Project Directory:**  
+   ```bash
+   %cd GlaucomaDetection
+   ```
+
+3. **Install Required Libraries:**  
+   ```bash
+   !pip install -r requirements.txt
+   ```
+
+4. **Run the Project:**  
+   ```bash
+   !python main.py [arguments]
+   ```
+
+**Supported Arguments:**  
+- `train_model` - Train the model from scratch  
+- `existing` - Retrain an existing model  
+- `make_predictions` / `None` - Use a pre-trained model for inference  
+
+---
+
+## **📊 Dataset Structure**  
+
+```
+DATASET/  
+├── train/  
+│   ├── Glaucoma_Positive/  
+│   └── Glaucoma_Negative/  
+├── val/  
+│   ├── Glaucoma_Positive/  
+│   └── Glaucoma_Negative/  
+└── test/  
+    ├── Glaucoma_Positive/  
+    └── Glaucoma_Negative/  
+```
+
+📌 **Dataset Download Link:** [Google Drive Dataset](https://drive.google.com/drive/folders/1M89d5jKBInbhvmEC95zn51zD6A25HKbF?usp=share_link)  
+
+---
+
+## **💻 Model Overview**  
+
+### **Model Architecture:**  
+- **Base Model:** Vision Transformer (ViT)  
+- **Fully Connected Layers:**  
+  - Activation: GELU  
+  - Final Layer: Softmax for binary classification  
+
+### **Training and Evaluation Metrics:**  
+- **Accuracy**  
+- **F1-Score**  
+- **Confusion Matrix**  
+
+---
+
+## **📈 Results**  
+
+### **🔍 Accuracy Plot:**  
+
+<div align="center">  
+
+![Accuracy Plot](https://github.com/AN-06/Glaucoma-Detection/blob/main/assets/Unknown-13.png)  
+
+</div>  
+
+---
+
+### **📷 Image Processing Overview:**  
+
+<div align="center">  
+
+![Image Processing](https://github.com/AN-06/Glaucoma-Detection/blob/main/assets/IMAGE%20PROCESSING.png)  
+
+</div>  
+
+---
+
+## **📦 Dependencies**  
+
+### **Core Libraries:**  
+- `numpy` - Numerical operations  
+- `pandas` - Data analysis and manipulation  
+- `scikit-learn` - Evaluation metrics  
+
+### **Deep Learning Libraries:**  
+- `tensorflow` - Deep learning framework  
+- `keras` - Model building interface  
+
+### **Image Processing Libraries:**  
+- `opencv-python` - Advanced image processing (optional)  
+- `Pillow` - Basic image processing  
+
+### **Visualization Libraries:**  
+- `matplotlib` - Data and result visualization  
+- `seaborn` - Enhanced plotting  
+
+---
+
+## **🚀 How to Train the Model**  
 
 You can install the modules individually with pip install, or add them to a requirements.txt file:
 
@@ -68,7 +184,7 @@ You can install the modules individually with pip install, or add them to a requ
 * Clone the repository using the following command:
 
     ```bash
-    !git clone https://github.com/CODEBRAKERBOYY/GlaucomaDetection.git
+    !git clone https://github.com/AN-06/GlaucomaDetection.git
     ```
 
 * Change into the cloned directory:
@@ -95,41 +211,16 @@ You can install the modules individually with pip install, or add them to a requ
     - `make_predictions` / `None` - This loads the existing model for inference.
 
 
-## Additional Dependencies
+---
 
-Make sure you have the following modules for optimal performance:
+## **📑 Additional Notes:**  
 
-- **CUDA** (if using a GPU): Ensure your system supports CUDA for faster training if you have a compatible NVIDIA GPU.
-- **Jupyter Notebook** (optional): For interactive experimentation and visualization.
+- Ensure that the dataset follows the correct folder structure before training.  
+- Use a **TPU** or **GPU** for faster training and better performance.  
+- Experiment with different preprocessing techniques if necessary.  
 
-## Dataset Structure
-The dataset should be structured as follows:
+---
 
-DATASET  
-├── train/  
-│   ├── Glaucoma_Positive/  
-│   └── Glaucoma_Negative/  
-└── val/  
-    ├── Glaucoma_Positive/  
-    └── Glaucoma_Negative/  
-└── test/  
-    ├── Glaucoma_Positive/  
-    └── Glaucoma_Negative/  
-
-    * While giving path as input always remember it consists only tow class one is Negative and other is Positive.
-* Perform image preprocesssing if you think it's necessary otherwise skip it.
-* Path for data images if you wants to retrain model:
-* https://drive.google.com/drive/folders/1M89d5jKBInbhvmEC95zn51zD6A25HKbF?usp=share_link
-
-  ### Accuracy plot
-
-![Accuracy Plot](https://github.com/AN-06/Glaucoma-Detection/blob/main/assets/Unknown-13.png)
-
-  ### Image Processing
-
-  ![Image Processing](https://github.com/AN-06/Glaucoma-Detection/blob/main/assets/IMAGE%20PROCESSING.png)
-
-  
 
 
 
