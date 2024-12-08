@@ -166,49 +166,21 @@ DATASET/
 
 ## **🚀 How to Train the Model**  
 
-You can install the modules individually with pip install, or add them to a requirements.txt file:
+1. Open Google Colab and enable TPU/GPU:
+Runtime → Change runtime type → Hardware accelerator → Select TPU
 
-- `pandas`
-- `scikit-learn`
-- `tensorflow`
-- `opencv-python`
-- `matplotlib`
-- `scikit-learn`
-- `seaborn`
-- `numpy`
 
-  * Start by opening Google Colab.
+2. Run the following commands in Colab:
 
-* Ensure that you have access to a TPU by selecting `Runtime` > `Change runtime type` > `Hardware accelerator` > `TPU`.
+```
+!git clone https://github.com/AN-06/Glaucoma-Detection.git
 
-* Clone the repository using the following command:
+%cd Glaucoma-Detection
 
-    ```bash
-    !git clone https://github.com/AN-06/GlaucomaDetection.git
-    ```
+!pip install -r requirements.txt
 
-* Change into the cloned directory:
-
-    ```bash
-    %cd GlaucomaDetection
-    ```
-
-* Install the required modules by running:
-
-    ```bash
-    !pip install -r requirements.txt
-    ```
-
-* To train your model or make predictions, run the following command:
-
-    ```bash
-    !python main.py [arguments]
-    ```
-
-    **Arguments:**
-    - `train_model` - Specify this if you want to train the model before inference.
-    - `existing` - Use this after the `train_model` argument if you want to retrain an existing model.
-    - `make_predictions` / `None` - This loads the existing model for inference.
+!python main.py train_model
+```
 
 
 ---
