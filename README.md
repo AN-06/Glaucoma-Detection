@@ -2,7 +2,7 @@
 
 ---
 
-## **📌 Problem Statement**  
+## **📌 Problem Statements**  
 
 Glaucoma is a chronic, irreversible eye disease that damages the optic nerve, potentially causing blindness if left untreated. Early detection is crucial, but traditional diagnostic methods require expert evaluation, which is expensive and time-consuming. Given its global impact, an automated deep learning-based diagnostic system can provide scalable, cost-effective solutions.  
 
@@ -192,6 +192,7 @@ Runtime → Change runtime type → Hardware accelerator → Select TPU
 - Experiment with different preprocessing techniques if necessary.  
 
 ---
+
 
 
 
